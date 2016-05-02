@@ -16,4 +16,4 @@ else
 fi
 
 # PS1
-export PS1="[\e[33;1m\u\e[00m@\H \e[35;1m\w/\e[00m]\$ "
+export PS1="[\[\e[33;1m\]\u\[\e[00m\]@\H \[\e[35;1m\]\w/\[\e[00m\]]\$ "
