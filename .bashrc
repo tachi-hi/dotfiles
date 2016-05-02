@@ -1,3 +1,6 @@
+# PATH
+export PATH=~/.pyenv/shims:$PATH
+
 # diff -> colordiff
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff'
