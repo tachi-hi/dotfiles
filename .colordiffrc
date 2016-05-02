@@ -1,0 +1,12 @@
+# available colours are: white, yellow, green, blue,
+#                        cyan, red, magenta, black,
+#                        darkwhite, darkyellow, darkgreen,
+#                        darkblue, darkcyan, darkred,
+#                        darkmagenta, darkblack
+
+#banner=no
+plain=blue
+newtext=cyan
+oldtext=magenta
+diffstuff=yellow
+#cvsstuff=blue
