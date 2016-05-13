@@ -39,3 +39,24 @@ fi
 
 # PS1
 export PS1="\[\e[33;1m\]\u\[\e[00m\]@\H \[\e[35;1m\]\w/\[\e[00m\]\$ "
+
+
+# colied from http://qiita.com/key-amb/items/ce39b0c85b30888e1e3b
+_path=""
+for _p in $(echo $PATH | tr ':' ' '); do
+  case ":${_path}:" in
+    *:"${_p}":* )
+      ;;
+    * )
+      if [ "$_path" ]; then
+        _path="$_path:$_p"
+      else
+        _path=$_p
+      fi
+      ;;
+  esac
+done
+PATH=$_path
+
+unset _p
+unset _path
