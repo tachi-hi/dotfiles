@@ -1,0 +1,22 @@
+# log
+*.log
+
+# backup files
+*~
+*.bak
+
+# mac
+.DS_Store
+
+# C/C++ objects
+.o
+.so
+
+# Python
+*.pyc
+__pycache__/*
+
+# LaTeX
+*.aux
+*.dvi
+*.pdf

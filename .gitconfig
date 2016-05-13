@@ -10,3 +10,5 @@
 	grep = auto
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
+	
