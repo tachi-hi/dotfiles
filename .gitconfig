@@ -1,0 +1,12 @@
+[user]
+	name = Hideyuki Tachibana
+	email = tachi-hi@users.noreply.github.com
+[color]
+	ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+[core]
+	editor = vim
