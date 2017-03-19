@@ -60,3 +60,6 @@ PATH=$_path
 
 unset _p
 unset _path
+
+# alias
+alias sl='ls'
