@@ -10,6 +10,7 @@ do
             # do nothing if it is symbolic
         else
             echo "file ${f} exists; append the content of ${f}"
+            cp ~/${f} ~/${f}.bak
             echo "## AUTOMATICALLY APPENDED BY SCRIPT: (FROM MY DOTFILES)" >> ~/${f}
             cat ${f} >> ~/${f}
         fi
