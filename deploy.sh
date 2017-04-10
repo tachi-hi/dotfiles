@@ -1,6 +1,6 @@
 #!/
 
-for f in `find -mindepth 1 -prune -type f -name '.*'`;
+for f in `find . -mindepth 1 -prune -type f -name '.*'`;
 do
     echo ${f}
     HERE=`pwd`
