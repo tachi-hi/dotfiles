@@ -16,6 +16,9 @@
 *.pyc
 __pycache__/*
 
+# ipython notebook
+.ipynb_checkpoints/
+
 # LaTeX
 *.aux
 *.dvi
