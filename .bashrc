@@ -1,5 +1,6 @@
 # PATH
 export PATH=~/.pyenv/shims:$PATH
+export PATH=~/.pyenv/bin:$PATH
 
 # diff -> colordiff
 if [[ -x `which colordiff` ]]; then
