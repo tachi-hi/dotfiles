@@ -2,6 +2,10 @@
 export PATH=~/.pyenv/shims:$PATH
 export PATH=~/.pyenv/bin:$PATH
 
+# CUDA
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
+export CUDA_HOME=/usr/local/cuda
+
 # diff -> colordiff
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff'
