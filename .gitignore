@@ -15,6 +15,7 @@
 # Python
 *.pyc
 __pycache__/*
+.python-version
 
 # ipython notebook
 .ipynb_checkpoints/
