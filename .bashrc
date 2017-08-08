@@ -68,3 +68,8 @@ unset _path
 
 # alias
 alias sl='ls'
+
+if type exa > /dev/null; then
+    echo 'using exa'
+    alias ll='exa'
+fi
