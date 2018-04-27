@@ -4,6 +4,7 @@
 # backup files
 *~
 *.bak
+.fuse_hidden*
 
 # mac
 .DS_Store
