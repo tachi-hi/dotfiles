@@ -6,8 +6,9 @@
 *.bak
 .fuse_hidden*
 
-# mac
+# mac OS
 .DS_Store
+._*
 
 # C/C++ objects
 .o
