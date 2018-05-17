@@ -8,6 +8,7 @@
 
 # mac
 .DS_Store
+._*
 
 # C/C++ objects
 .o
