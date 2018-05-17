@@ -6,7 +6,7 @@
 *.bak
 .fuse_hidden*
 
-# mac
+# mac OS
 .DS_Store
 ._*
 
