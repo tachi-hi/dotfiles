@@ -11,7 +11,7 @@ colors
 if [ "$(uname)" = 'Darwin' ]; then
     alias ls='ls -G'
     PS1='%n@%m %~$ '
-    PROMPT="{$fg[yellow]%}%n@%{$fg[blue]%}%m %{$fg[magenta]%}%~ ${reset_color}$ "
+    PROMPT="$fg[yellow]%}%n@%{$fg[blue]%}%m %{$fg[magenta]%}%~ ${reset_color}$ "
 else
     alias ls='ls --color=auto'
 fi
