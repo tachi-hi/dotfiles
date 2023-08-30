@@ -11,10 +11,17 @@ colors
 if [ "$(uname)" = 'Darwin' ]; then
     alias ls='ls -G'
     PS1='%n@%m %~$ '
-    PROMPT="$fg[yellow]%}%n@%{$fg[blue]%}%m %{$fg[magenta]%}%~ ${reset_color}$ "
+    PROMPT="%{$fg[yellow]%}%n@"
+    PROMPT+="%{$fg[blue]%}%m "
+    PROMPT+="%{$fg[magenta]%}%~ "
+    PROMPT+="%{$reset_color%}$ "
 else
     alias ls='ls --color=auto'
 fi
+
+# language
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 
 # colied from http://qiita.com/key-amb/items/ce39b0c85b30888e1e3b
