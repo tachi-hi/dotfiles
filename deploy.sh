@@ -23,3 +23,9 @@ do
         echo "created symbolic link ${f}"
     fi
 done
+
+# copy matplotlibrc to ~/.matplotlib/matplotlibrc if it does not exist
+if [ ! -e ~/.matplotlib/matplotlibrc ]; then
+    mkdir -p ~/.matplotlib
+    cp matplotlibrc ~/.matplotlib/matplotlibrc
+fi
