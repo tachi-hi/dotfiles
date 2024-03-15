@@ -73,3 +73,7 @@ if type exa > /dev/null; then
     echo 'using exa'
     alias ll='exa'
 fi
+
+PATH=$PATH:/opt/homebrew/bin/
+
+alias sudu='sudo du -h --max-depth=1 .'
