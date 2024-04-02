@@ -75,5 +75,13 @@ if type exa > /dev/null; then
 fi
 
 PATH=$PATH:/opt/homebrew/bin/
+PATH=$PATH:/opt/homebrew/anaconda3/bin/
 
 alias sudu='sudo du -h --max-depth=1 .'
+
+homedir=~
+eval homedir=$homedir
+venv=$homedir/.venv
+PATH=$PATH:$venv
+#python3 -m venv $venv
+source $venv/bin/activate

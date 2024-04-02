@@ -51,3 +51,13 @@ if type exa > /dev/null; then
     echo 'using exa'
     alias ll='exa'
 fi
+
+PATH=$PATH:/opt/homebrew/bin/
+PATH=$PATH:/opt/homebrew/anaconda3/bin/
+
+homedir=~
+eval homedir=$homedir
+venv=$homedir/.venv
+PATH=$PATH:$venv
+#python3.11 -m venv $venv
+source $venv/bin/activate
