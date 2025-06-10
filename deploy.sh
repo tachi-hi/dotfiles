@@ -81,6 +81,17 @@ main() {
         fi
     fi
     
+    # Handle .config directory
+    if [ -d "$DOTFILES_DIR/.config" ]; then
+        mkdir -p "$HOME/.config"
+        find "$DOTFILES_DIR/.config" -type f | while read -r file; do
+            relative_path="${file#$DOTFILES_DIR/.config/}"
+            target_dir="$HOME/.config/$(dirname "$relative_path")"
+            mkdir -p "$target_dir"
+            create_symlink "$file" "$HOME/.config/$relative_path"
+        done
+    fi
+    
     
     log "Deployment completed successfully"
     if [ -d "$BACKUP_DIR" ]; then
