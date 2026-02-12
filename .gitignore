@@ -1,0 +1,19 @@
+# Local configurations (not tracked)
+*.local
+.gitconfig.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*~
+.vscode/
+.idea/
+
+# Secrets (just in case)
+*.pem
+*.key
+.env
+.env.*

@@ -1,0 +1,96 @@
+# Starship Prompt Configuration
+# https://starship.rs/config/
+
+# Timeout for commands executed by starship (in milliseconds)
+command_timeout = 1000
+
+# Insert blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+# Format of the prompt
+format = """
+$username\
+$hostname\
+$directory\
+$python\
+$cmd_duration\
+$line_break\
+$character"""
+
+# Directory
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+format = "[$path](bold purple)[$read_only](bold red) "
+read_only = "🔒"
+home_symbol = "~"
+
+# Git branch (disabled)
+[git_branch]
+disabled = true
+
+# Git status (disabled)
+[git_status]
+disabled = true
+
+# Python
+[python]
+symbol = "🐍 "
+style = "bold bright-yellow"
+pyenv_version_name = true
+detect_extensions = ["py"]
+detect_files = ["requirements.txt", "pyproject.toml", "Pipfile", ".python-version"]
+
+# Node.js (disabled)
+[nodejs]
+disabled = true
+
+# Rust (disabled)
+[rust]
+disabled = true
+
+# Go (disabled)
+[golang]
+disabled = true
+
+# Docker (disabled)
+[docker_context]
+disabled = true
+
+# Command duration (show if > 2 seconds)
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold bright-yellow) "
+show_milliseconds = false
+
+# Username
+[username]
+style_user = "bold bright-yellow"
+style_root = "bold bright-red"
+format = "[$user]($style)@"
+show_always = true
+
+# Hostname
+[hostname]
+ssh_only = false
+format = "[$hostname](bold bright-cyan) "
+disabled = false
+
+# Time (disabled)
+[time]
+disabled = true
+
+# Disabled modules
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true

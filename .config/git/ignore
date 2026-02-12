@@ -48,3 +48,6 @@ ENV/
 *.nav
 *.snm
 *.vrb
+
+# Claude
+.claude/settings.local.json
