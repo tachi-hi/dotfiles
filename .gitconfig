@@ -1,0 +1,127 @@
+# Git Configuration (shared settings from dotfiles)
+# User-specific settings (name, email) should be in ~/.gitconfig.local
+
+[include]
+    # Include local/private config (not tracked in dotfiles)
+    path = ~/.gitconfig.local
+
+[core]
+    editor = vim
+    autocrlf = input
+    excludesfile = ~/.config/git/ignore
+    # pager is set via GIT_PAGER in shell config (only if delta is installed)
+
+[init]
+	defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+# Delta configuration (beautiful diffs)
+[delta]
+    navigate = true
+    light = false
+    side-by-side = true
+    line-numbers = true
+    syntax-theme = Dracula
+    plus-style = "syntax #003800"
+    minus-style = "syntax #3f0001"
+
+# [interactive] diffFilter is set via shell config (only if delta is installed)
+
+# Useful aliases
+[alias]
+    # Status
+    s = status -sb
+    st = status
+
+    # Logs
+    l = log --oneline -20
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ll = log --oneline --graph --all
+    last = log -1 HEAD --stat
+
+    # Branches
+    br = branch
+    bra = branch -a
+    co = checkout
+    cob = checkout -b
+    sw = switch
+    swc = switch -c
+
+    # Commits
+    cm = commit -m
+    ca = commit --amend
+    can = commit --amend --no-edit
+
+    # Diff
+    d = diff
+    ds = diff --staged
+    dc = diff --cached
+
+    # Reset
+    unstage = reset HEAD --
+    undo = reset --soft HEAD~1
+
+    # Stash
+    ss = stash save
+    sp = stash pop
+    sl = stash list
+
+    # Remote
+    f = fetch --all --prune
+    p = push
+    pf = push --force-with-lease
+    pl = pull
+
+    # Interactive
+    ri = rebase -i
+    rc = rebase --continue
+    ra = rebase --abort
+
+    # Misc
+    aliases = config --get-regexp alias
+    contributors = shortlog --summary --numbered
+    whoami = config user.email
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+
+# URL shortcuts
+[url "git@github.com:"]
+    insteadOf = gh:
+
+[url "git@gitlab.com:"]
+    insteadOf = gl:
