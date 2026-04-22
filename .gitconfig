@@ -10,6 +10,14 @@
     autocrlf = input
     excludesfile = ~/.config/git/ignore
     # pager is set via GIT_PAGER in shell config (only if delta is installed)
+    # グローバル hooks ディレクトリ。注意: これを設定すると個別リポの .git/hooks/ は無視される
+    hooksPath = ~/.config/git/hooks
+    # コミット前チェックで弾く whitespace エラー種別
+    whitespace = trailing-space,space-before-tab,tab-in-indent
+
+[apply]
+    # git apply 時に whitespace エラーを自動修正する
+    whitespace = fix
 
 [init]
 	defaultBranch = main

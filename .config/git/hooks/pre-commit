@@ -1,0 +1,9 @@
+#!/bin/sh
+# ステージ済み変更の whitespace エラーを検出してコミットを中止する。
+# 検出種別は core.whitespace の設定に従う。
+if git rev-parse --verify HEAD >/dev/null 2>&1; then
+    against=HEAD
+else
+    against=$(git hash-object -t tree /dev/null)
+fi
+exec git diff-index --check --cached $against --
