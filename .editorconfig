@@ -1,0 +1,21 @@
+# 擬似グローバル EditorConfig（~/.editorconfig にシンボリックリンクされる）
+# 仕様上 EditorConfig は編集ファイルから親ディレクトリへ遡って設定を探索するため、
+# プロジェクト側に .editorconfig が無い場合のフォールバックとして機能する。
+# プロジェクトに root=true の .editorconfig があればそちらが優先される。
+# 注意: /tmp など $HOME 配下以外のファイルには効かない。
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+# Markdown は末尾空白2個が改行扱いなので trim しない
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab

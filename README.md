@@ -58,6 +58,7 @@ The script will:
 
 ### Additional Features
 - **Matplotlib**: Configuration for Python plotting library
+- **.editorconfig**: `~/.editorconfig` として擬似グローバル配置される EditorConfig。プロジェクト側に `.editorconfig` が無い場合のフォールバックとして機能する（プロジェクトに `root=true` があればそちらが優先）
 
 ## Customization
 

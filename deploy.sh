@@ -174,8 +174,8 @@ main() {
 
     log "Starting deployment from $DOTFILES_DIR"
 
-    # Deploy shell configuration files
-    for file in .bashrc .zshrc; do
+    # Deploy top-level dotfiles (shell + editor configs)
+    for file in .bashrc .zshrc .editorconfig; do
         if [ -f "$DOTFILES_DIR/$file" ]; then
             create_symlink "$DOTFILES_DIR/$file" "$HOME/$file"
         fi
